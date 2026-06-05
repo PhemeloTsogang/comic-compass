@@ -1,7 +1,31 @@
+@font-face {
+  font-family: 'RocaOneBold';
+  src: url('../assets/fonts/roca-one-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'InterBlack';
+  src: url('../assets/fonts/Inter-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'InterMedium';
+  src: url('../assets/fonts/Inter-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'InterRegular';
+  src: url('../assets/fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'InterSemiBold';
+  src: url('../assets/fonts/Inter-SemiBold.woff2') format('woff2');
+}
+
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -12,13 +36,30 @@ body {
     grid-template-rows: auto 1fr auto; /* Header, Main Content, Footer */
 }
 
+.background-img {
+    opacity: 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/279.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
 .logo-title {
     background-color: #222222;
+    font-size: 1.3rem;
+    font-family: 'RocaOneBold', sans-serif;
+    text-shadow: 2px 2px 0 #6b0000;
     color: #EBC626;   
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo-title img {
@@ -27,6 +68,100 @@ body {
     margin-bottom: 0.5rem;
     height: 4rem;
     width: 4rem;
+}
+
+.nav-bar {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-family: 'RocaOneBold', sans-serif;
+    font-size: 1.2rem;
+    color: #222222;
+    text-shadow: 2px 2px 0 #EBC626;
+    display: inline-block;
+    padding: 10px 20px; 
+    border-radius: 20px;
+    
+}
+
+/* Hidden bubble
+/
+/
+/
+/
+/
+/
+/
+/ */
+.nav-link::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 100px;
+
+    background-image: url("../images/SpeechBubble.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    opacity: 0;
+    transition: 0.2s ease;
+
+    z-index: -1;
+}
+
+/* Show bubble on hover */
+.nav-link:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+/*
+/
+/
+/
+/
+/
+/
+*/
+
+
+#hero-home {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#home-img img {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    height: auto;
+    width: 30rem;
+}
+
+.hero-bold {
+    font-family: 'InterBlack', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-normal {
+    font-family: 'InterMedium', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 footer {
