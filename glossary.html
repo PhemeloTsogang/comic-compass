@@ -6,6 +6,7 @@
     <title>Glossary - Comic Compass</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/navigation.js" defer></script>
+    <script src="JS/glossary.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                 <div class="hero-txt" id="home-txt">
                     <p class="hero-bold">Find The Definition Of Any Comic Lingo You Need</p>
                     <p class="hero-normal">This page provides definitions for common words used in the comic space. Learn any comic defintion with included examples.</p> 
-                    <a href="index.html">Learn More</a>
+                    <p id="start-btn2">Learn More &darr;</p>
                 </div>  
 
                 <div class="hero-img" id="glossaryPage-img-radiant">
@@ -45,20 +46,20 @@
     <main>
         <section class="glossary-term-section">
             <div class="glossary-term-grid">
-                <button class="glossary-term">Retcon</button>
-                <button class="glossary-term">Volume</button>
-                <button class="glossary-term">Trade Paperback</button>
-                <button class="glossary-term">Reboot</button>
-                <button class="glossary-term">Omnibus</button>
-                <button class="glossary-term">Canon</button>
-                <button class="glossary-term">Continuity</button>
-                <button class="glossary-term">Issue</button>
+                <button class="glossary-term" data-term="retcon">Retcon</button>
+                <button class="glossary-term" data-term="volume">Volume</button>
+                <button class="glossary-term" data-term="trade-paperback">Trade Paperback</button>
+                <button class="glossary-term" data-term="reboot">Reboot</button>
+                <button class="glossary-term" data-term="omnibus">Omnibus</button>
+                <button class="glossary-term" data-term="canon">Canon</button>
+                <button class="glossary-term" data-term="continuity">Continuity</button>
+                <button class="glossary-term" data-term="issue">Issue</button>
             </div>
         </section>
 
         <section class="glossary-tools">
             <div class="search-bar">
-                <input class="search-input" type="text" placeholder="Search terms...">
+                <input class="search-input" type="text" data-search-item=".glossary-term" placeholder="Search terms...">
             </div>
         </section>
 
@@ -66,13 +67,13 @@
             <div class="glossary-container">
                 <div class="character-card">
                     <div class="glossary-def">
-                        <h2>Definition</h2>
-                        <p></p>
+                        <h2 id="glossaryTitle">Definition</h2>
+                        <p id="glossaryDefinition">Click a glossary term to view its definition.</p>
                     </div>
 
                     <div class="glossary-eg">
                         <h2>Example:</h2>
-                        <p></p>
+                        <p id="glossaryExample">Select a term above to see an example.</p>
                     </div>
                 </div>
             </div>

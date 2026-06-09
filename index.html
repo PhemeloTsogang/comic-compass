@@ -6,6 +6,7 @@
     <title>Comic Compass</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/navigation.js" defer></script>
+    <script src="JS/home.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                 <div class="hero-txt" id="home-txt">
                     <p class="hero-bold">Your Ultimate Navigation Guide To All Things Comics</p>
                     <p class="hero-normal">Comic Compass is an all-purpose comic discovery platform. Find Beginner-friendly entry points to franchises, curated reading lists, character guides and comic terms all in one place.</p> 
-                    <a href="index.html">START HERE</a>
+                    <p id="start-btn1">START HERE &darr;</p>
                 </div>  
             </div>
         </section>
@@ -36,60 +37,49 @@
 
     <main>
         <section class="start-here">
-            <div class="container1">
+            <div class="container1 section-layout">
                 <h2 class="heading-style-1">WHERE TO START?</h2>
 
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-img">                    
-                        </div>
-                        <h3></h3>
-                    </div>
+                <div class="card-grid start-grid">
+
                 </div>
 
-                <h3 class="guides-link">Beginner Guides Page</h3>
+                <h3 class="guides-link page-link1" data-link="guides">Beginner Guides Page →</h3>
             </div>
         </section>
 
         <section class="recommendations">
-            <div class="container2">
+            <div class="container2 section-layout">
                 <h2 class="heading-style-2">RECOMMENDED COMICS</h2>
 
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-img">                    
-                        </div>
-                        <h3></h3>
-                    </div>
+                <div class="card-grid recommended-grid">
+
                 </div>
 
-                <h3 class="recommed-link">Recommended Comics Page</h3>
+                <h3 class="recommend-link page-link2" data-link="recommendations">Recommended Comics Page →</h3>
             </div>
         </section>
 
         <section class="pop-chars">
-            <div class="container1">
+            <div class="container1 section-layout">
                 <h2 class="heading-style-1">POPULAR CHARACTERS</h2>
 
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-img">                    
-                        </div>
-                    </div>
+                <div class="card-grid character-grid">
+
                 </div>
 
-                <h3 class="chars-link">Characters Page</h3>
+                <h3 class="chars-link page-link1" data-link="characters">Characters Page →</h3>
             </div>
         </section>
             
         <section>
-            <div class="container2">
+            <div class="container2 lingo-section">
                 <h2 class="heading-style-2">COMIC LINGO</h2>
 
-                <p>Canon</p>
-                <p>Trade Paperback</p>
+                <p><strong>Canon:</strong> the official, accepted, and “real” storyline of a character or universe.</p>
+                <p><strong>Trade Paperback:</strong> a softcover book that collects several individual comic book issues into one volume.</p>
 
-                <h3 class="glossary-link">Glossary Page</h3>
+                <h3 class="glossary-link page-link2" data-link="glossary">Glossary Page →</h3>
             </div>             
         </section>
     </main>

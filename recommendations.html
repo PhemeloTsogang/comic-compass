@@ -6,6 +6,10 @@
     <title>Recommendations - Comic Compass</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/navigation.js" defer></script>
+    <script src="JS/recommendations.js" defer></script>
+    <script src="JS/search&filter.js" defer></script>
+    <script src="JS/accordion.js" defer></script>
+
 </head>
 
 <body>
@@ -32,23 +36,13 @@
                 <div class="hero-txt" id="home-txt">
                     <p class="hero-bold">Find Cosmic Reading Lists For Your Favourite Stories</p>
                     <p class="hero-normal">This page provides you with curated lists and reading orders for all types of characters and stories. Search for any character to be guided through their respective story arcs and issues in standardized orders.</p> 
-                    <a href="index.html">Learn More</a>
+                    <p id="start-btn1">Learn More &darr;</p>
                 </div>  
             </div>
         </section>
     </header>
 
     <main>
-        <section class="recommend-tools">
-            <div class="search-bar">
-                <input class="search-input" type="text" placeholder="Search characters...">
-
-                <div class="filter-buttons">
-                    <button>Filter</button>
-                </div>
-            </div>
-        </section>
-
         <section class="recommendations">
             <div class="container2" id="recommend-container">
                 <h2 class="heading-style-2">Popular Stories</h2>
@@ -63,22 +57,29 @@
             </div>
         </section>
 
+        <section class="recommend-tools">
+            <div class="search-bar">
+                <input class="search-input" type="text" data-search-item=".recommended-list" placeholder="Search characters...">
+
+                <div class="filter-buttons">
+                    <button class="filter-toggle">Filter</button>
+                </div>
+
+                <div class="filter-panel">
+                    <button type="button" data-filter="all">All</button>
+                    <button type="button" data-filter="marvel">Marvel</button>
+                    <button type="button" data-filter="dc">DC</button>
+                    <button type="button" data-filter="image-comics">Image Comics</button>
+                </div>
+            </div>
+        </section>
+
         <section class="recommended">
-            <div class="grid-container">
+            <div class="grid-container" id="container-rec">
                 <div id="r-grid-heading">
                     <h2 class="heading-style-1">Recommendations</h2>
                 </div>
 
-                <div id="r-list-title">
-                    <h3>List Title</h3>
-                </div>
-
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-img">                    
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>

@@ -6,6 +6,9 @@
     <title>Characters - Comic Compass</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/navigation.js" defer></script>
+    <script src="JS/characters.js" defer></script>
+    <script src="JS/search&filter.js" defer></script>
+    <script src="JS/accordion.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +32,7 @@
                     <p class="hero-bold">Discover Key Info About Every Comic Character</p>
                     <p class="hero-normal">This page provides detailed character explanations and identifications for your favourite characters.</p> 
                     <p class="hero-normal">Discover key story arcs and notable reboots and universes for each character.</p>
-                    <a href="index.html">Learn More</a>
+                    <p id="start-btn1">Learn More &darr;</p>
                 </div>  
 
                 <div class="hero-img" id="charsPage-img">
@@ -47,45 +50,32 @@
                     <h2 class="heading-style-1">User-Favourite Characters</h2>
                 </div>
 
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-img">                    
-                        </div>
-                        <h3></h3>
-                    </div>
+                <div class="card-grid" id="pop-char-grid">
+
                 </div>
             </div>
         </section>
 
         <section class="character-tools">
             <div class="search-bar">
-                <input class="search-input" type="text" placeholder="Search characters...">
+                <input class="search-input" type="text" data-search-item=".character-item" placeholder="Search characters...">
 
                 <div class="filter-buttons">
-                    <button>Filter</button>
+                    <button class="filter-toggle" type="button">Filter</button>
+                </div>
+
+                <div class="filter-panel">
+                    <button type="button" data-filter="all">All</button>
+                    <button type="button" data-filter="marvel">Marvel</button>
+                    <button type="button" data-filter="dc">DC</button>
+                    <button type="button" data-filter="image-comics">Image Comics</button>
                 </div>
             </div>
         </section>
 
         <section class="character-id">
-            <div class="container">
-                <div class="character-card">
-                    <div class="char-name">
-                        <h2>Character Name</h2>
-                    </div>
+            <div class="container" id="container-char">
 
-                    <div class="char-id-title">
-                        <h3>Character Identification:</h3>
-                    </div>
-
-                    <div class="key-universes">
-                        <h3>Key Universes and Reboots:</h3>
-                    </div>
-
-                    <div class="story-arcs">
-                        <h3>Popular Story Arcs:</h3>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
