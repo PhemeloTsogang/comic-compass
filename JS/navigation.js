@@ -11,10 +11,11 @@ navBar.innerHTML =
     <a href="glossary.html" class="nav-link" "glossary-btn">Glossary</a>
 `;
 
-const hamburgerBtn = document.querySelector(".hamburger-btn");
+const hamburgerBtn = document.querySelector(".hamburger-btn"); //hamburger button
 
+//clicking hamburger button displays nav bar
 hamburgerBtn.addEventListener("click", () => {
-    navBar.classList.toggle("nav-open");
+    navBar.classList.toggle("nav-open");  //opens nav bar by giving navBar this class
 });
 
 
@@ -23,9 +24,9 @@ const logo = document.querySelector(".logo-title img");
 const logoTitle = document.querySelector(".logo-title h1"); //selecting logo html element
 
 logo.addEventListener("click", () => {
-    window.location.href = "../index.html"; //click of the specified html element redirects to home page
+    window.location.href = "../index.html"; //click of the logo picture redirects to home page
 });
 
 logoTitle.addEventListener("click", () => {
-    window.location.href = "../index.html";
+    window.location.href = "../index.html"; //click of logo title opens home page
 });

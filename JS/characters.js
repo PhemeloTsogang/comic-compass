@@ -1,13 +1,14 @@
-//"Start Here" button click auto-scrolls to "Where to Start" Section
-const startBtn = document.querySelector("#start-btn1"); //selecting start button html element
+//"Learn More" button click auto-scrolls to first main interactive section of page
+const startBtn = document.querySelector("#start-btn1"); 
 const start = document.querySelector(".popular-chars");
 
 startBtn.addEventListener("click", () => {
     start.scrollIntoView({
-        behavior: "smooth"                             //click of start button creates smooth scroll to desired section 
+        behavior: "smooth"                             //smooth scroll towards that section
     });
 });
 
+//array of popular character objects with all their information and tooltip information when hovered on
 const popChars = [
     {
         image: "../images/character-faces/peterParker.jpg",
@@ -66,13 +67,16 @@ const popChars = [
     },
 ];
 
-const popularContainer = document.querySelector("#pop-char-grid");
+const popularContainer = document.querySelector("#pop-char-grid"); //container of all charcater images
 
+//map apply functionality to all charcter image cards
 popChars.map(char => {
-    //create all home page character image cards
+    //creates all home page character image cards
     const card = document.createElement("div");
-    card.classList.add("card", "character-preview");
+    card.classList.add("card", "character-preview");  //adds two classes for universal character card styling
+                                                      //"character-preview" allows for tooltip to be displayed when hovered
 
+    //card image structure
     card.innerHTML =
     `
         <div class="card-img" id="char-card">
@@ -87,10 +91,11 @@ popChars.map(char => {
 
     popularContainer.appendChild(card); //adds all cards to container
 
-    //allows card clicking to redirect specific recommended list
+    //allows card clicking to redirect to corresponding character description
     card.addEventListener("click", () => {
         const characterCard = document.querySelector(
-            `[data-char="${char.character}"]`
+            `[data-char="${char.character}"]`                       //data-char of card is same as value of "character" in the data set
+                                                                    //therefore card and charcater descr linked
         );
 
         // Removes any previous highlight character identification
@@ -102,7 +107,7 @@ popChars.map(char => {
         characterCard.classList.add("selected-card");
 
         if (characterCard) {
-            characterCard.scrollIntoView({
+            characterCard.scrollIntoView({            //scrolls to corresponding character description
                 behavior: "smooth",
                 block: "center"
             });
@@ -110,6 +115,7 @@ popChars.map(char => {
     });
 });
 
+//character data and descriptions for main character identification section
 const characterData = [
     {
         id: "spider-man-peter",
@@ -449,8 +455,9 @@ const characterData = [
     }
 ];
 
-const characterContainer = document.querySelector("#container-char");
+const characterContainer = document.querySelector("#container-char"); //charcter description container
 
+//each character data object displays description and info in charcater description section
 characterData.map(char => {
 
     const card = document.createElement("div");
@@ -484,15 +491,16 @@ characterData.map(char => {
     characterContainer.appendChild(card);
 });
 
+//finds values passed through the page
 const params = new URLSearchParams(window.location.search);
-const selectedCharacter = params.get("character");
+const selectedCharacter = params.get("character");  //finds the specific character
 
 if (selectedCharacter) {
     const selectedCharCard =
-        document.querySelector(`[data-char="${selectedCharacter}"]`);
+        document.querySelector(`[data-char="${selectedCharacter}"]`);  //finds the corresponsing character 
 
     if (selectedCharCard) {
-        selectedCharCard.scrollIntoView({
+        selectedCharCard.scrollIntoView({                              //scrolls to that selected charcter 
             behavior: "smooth",
             block: "center"
         });

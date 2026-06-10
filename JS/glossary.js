@@ -1,4 +1,4 @@
-//"Start Here" button click auto-scrolls to "Where to Start" Section
+//"Learn More" button click auto-scrolls to main glossary interaction section
 const startBtn = document.querySelector("#start-btn2"); //selecting start button html element
 const start = document.querySelector(".glossary-term-section");
 
@@ -8,8 +8,17 @@ startBtn.addEventListener("click", () => {
     });
 });
 
-
+//Glossary data is structured as an object containing more objects so that each value in the list does not need an id 
+//to be referenced to the corresponding glossary term button
 const glossaryData = {
+
+    //default data shown if no definition is shown
+    default: {
+        title: "Definition",
+        definition: "Click/search a glossary term to view its definition.",
+        example: "Select a term above to see an example."
+    },
+
     retcon: {
         title: "Retcon",
         definition: "A retcon is a change made to previously established story continuity.",
@@ -67,25 +76,31 @@ const exampleElement = document.querySelector("#glossaryExample");
 
 const searchInput = document.querySelector(".search-input");
 
+//Reusable function allowning a glossary term within the data set to be displayed
 function displayTerm(termKey) {
 
     const termInfo = glossaryData[termKey];
 
-    if (!termInfo) return;
+    if (!termInfo) {
+        return;                                  //exit function if glossary term does not exist in data set
+    }
 
+    //Assignment of corresponding glosarry term data to the variable it represents
     titleElement.textContent = termInfo.title;
     definitionElement.textContent = termInfo.definition;
     exampleElement.textContent = termInfo.example;
 }
 
+//allows click of each glossary ter on page to display corresponding definition
 glossaryButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        const selectedTerm = button.dataset.term;
+        const selectedTerm = button.dataset.term;    //selectedTerm becomes the key data-attribute value corresponding to that definition
 
-        displayTerm(selectedTerm);
+        displayTerm(selectedTerm);                  //uses that selected term and displayTerm function to display corresponding definition in data set
 
+        //displayTerm usually removes active funtionality
         glossaryButtons.forEach(btn => {
             btn.classList.remove("active-filter");
         });
@@ -95,17 +110,39 @@ glossaryButtons.forEach(button => {
 
 });
 
+//definition display display default term if search bar is empty
 searchInput.addEventListener("input", () => {
 
-    const searchText = searchInput.value.toLowerCase().trim();
+    if (searchInput.value.trim() === "") {
 
-    if (searchText === "") return;
+        glossaryButtons.forEach(term => {
+            term.style.display = "";      //turns off turn button active filter
+        });
 
-    const matchingTerm = Object.keys(glossaryData).find(term =>
-        term.includes(searchText)
-    );
+        displayTerm("default"); 
 
-    if (matchingTerm) {
-        displayTerm(matchingTerm);
+        return;
     }
 });
+
+
+//only displays search if user clicks enter
+searchInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+        const searchText = searchInput.value.toLowerCase().trim();
+
+        if (searchText === "") {
+            return;                                     //exit is serach bar empty
+        } 
+         //looks through each object in the larger object container and finds corresponding term
+        const matchingTerm = Object.keys(glossaryData).find(term =>
+            term.includes(searchText)
+        );
+
+        if (matchingTerm) {
+            displayTerm(matchingTerm);
+        }
+    }
+});
+

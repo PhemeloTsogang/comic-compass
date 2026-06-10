@@ -1,15 +1,20 @@
-# Comic Compass
+Comic Compass is a beginner-friendly discovery and learning platform created to help users discover fictional charcters, find curated reading orders and understand comic terminology all in one place. This platform is a **non-commercial educational project** built to demonstrate front-end design skills.
 
-A beginner-friendly comic discovery and learning platform designed to help users understand comic terminology, discover characters, and find recommended reading orders.
+**Technologies Used:**
 
-## Technologies
 - HTML
 - CSS
 - JavaScript
 
-## Features
-- Character exploration
+
+**Features included:**
+
+- Character identifications
 - Beginner guides
-- Reading recommendations
-- Comic glossary
-- Responsive design
+- Reading order recommendations
+- Comic glossary and examples
+- Responsive design for tablet and mobile devices
+
+**DISCLAIMER**
+
+**This website is a non-commercial, fan-man and researched portfolio project. All comic book images, covers character names, storylines are the intellectual property and trademarks of their respective owners. No copyright infringement is intended.**

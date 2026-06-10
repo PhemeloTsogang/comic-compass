@@ -72,17 +72,17 @@ const recommendCards = [
     {
         title: "Fan Favourite Indie Comic Reading List",
         image: "../images/recommendation-covers/radiant-black.jpg",
-        recommendation: "indie"
+        recommendation: "indie-starter"
     },
 
     {
         title: "Batman: Court of Owls Story Arc Reading Order",
         image: "../images/recommendation-covers/batman-CoO.jpg",
-        recommendation: "batman"
+        recommendation: "court-of-owls"
     }
 ];
 
-const recommendCardGrid = document.querySelector(".recommended-grid");
+const recommendCardGrid = document.querySelector(".recommended-grid"); //container for the recommendation cards
 
 recommendCards.map(rec => {
     //create all home page recommendation cards

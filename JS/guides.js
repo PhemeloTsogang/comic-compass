@@ -1,13 +1,15 @@
-//"Start Here" button click auto-scrolls to "Where to Start" Section
-const startBtn = document.querySelector("#start-btn2"); //selecting start button html element
+//"Learn more" button operates same way as characters page code.
+//"Learn more" leads to popula beginner guides
+const startBtn = document.querySelector("#start-btn2"); 
 const start = document.querySelector(".pop-search");
 
 startBtn.addEventListener("click", () => {
     start.scrollIntoView({
-        behavior: "smooth"                             //click of start button creates smooth scroll to desired section 
+        behavior: "smooth"                             
     });
 });
 
+//popular searches data array
 const popSearch = [
     //Each object holds card information
     {
@@ -25,14 +27,14 @@ const popSearch = [
     {
         title: "How to Start Reading Flash Comics",
         image: "../images/guide-images/beginner-flash.jpg",
-        guide: "flash"
+        guide: "flash-wally"
     },    
 ];
 
 const popularContainer = document.querySelector("#pop-search-grid");
 
+//creates all guide cards
 popSearch.map(char => {
-    //create all home page character image cards
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -46,7 +48,7 @@ popSearch.map(char => {
 
     popularContainer.appendChild(card); //adds all cards to container
 
-    //allows card clicking to redirect specific recommended list
+    //allows card clicking to redirect specific guide
     card.addEventListener("click", () => {
         const characterCard = document.querySelector(
             `[data-guide="${char.guide}"]`
@@ -57,7 +59,7 @@ popSearch.map(char => {
             card.classList.remove("selected-card");
         });
 
-        // Highlights the character guide 
+        // Highlights the current character guide 
         characterCard.classList.add("selected-card");
 
         if (characterCard) {
@@ -69,10 +71,11 @@ popSearch.map(char => {
     });
 });
 
+//Main beginner guides data
 const guideData = [
     {
-        id: "spider-man",
-        name: "Spider-Man (Earth-616)",
+        id: "spider-man",                                   //id value allows actual beginner guide to be linked to popular guide cards 
+        name: "Spider-Man (Earth-616)",                     //and to be searched for
         tags: "marvel spider-man peter-parker beginner",
         intro: "Spider-Man is Marvel's flagship superhero and one of the most recognizable comic characters ever created. Peter Parker balances everyday life with superhero responsibilities, making him one of the most relatable heroes in comics.",
         readingOrders: `
@@ -226,6 +229,7 @@ const guideData = [
 
 const guidesContainer = document.querySelector("#container-guides");
 
+//adds guides to main section
 guideData.map(guide => {
 
     const card = document.createElement("div");
@@ -251,6 +255,6 @@ guideData.map(guide => {
         </div>
     `;
 
-    guidesContainer.appendChild(card);
+    guidesContainer.appendChild(card);   //adds guides to parent container
 });
 
