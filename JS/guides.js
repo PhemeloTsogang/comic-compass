@@ -14,7 +14,7 @@ const popSearch = [
     //Each object holds card information
     {
         title: "How to Start Reading Spider-Man Comics",
-        image: "images/guide-images/beginner-spidey.jpg",
+        image: "images/guide-images/Beginner-spidey.jpg",
         guide: "spider-man"
     },
 
