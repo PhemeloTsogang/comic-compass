@@ -86,6 +86,27 @@ searchInputs.forEach(input => {
         }
     });
 
+    input.addEventListener("input", () => {
+
+    if (input.value.trim() === "") {
+            activeFilter = "all";
+
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active-filter");
+            });
+
+            const allButton = searchArea.querySelector(
+                '[data-filter="all"]'
+            );
+
+            if (allButton) {
+                allButton.classList.add("active-filter");
+            }
+
+            updateItems();
+        }
+    });
+
     updateItems();
 
     if (initialSelection) {

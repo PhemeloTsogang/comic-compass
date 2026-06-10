@@ -27,19 +27,19 @@ const guideCards = [
     //Each object holds card information
     {
         title: "How to Start Reading Spider-Man Comics",
-        //image: "images/invincible.png",
+        image: "../images/guide-images/Beginner-spidey.jpg",
         guide: "spider-man"
     },
 
     {
         title: "How to Start Reading Batman Comics",
-        //image: "images/invincible.png",
+        image: "../images/guide-images/batsy.png",
         guide: "batman"
     },
 
     {
         title: "How to Start Reading DC Comics",
-        //image: "images/invincible.png",
+        image: "../images/guide-images/dc.avif",
         guide: "dc"
     }
 ];
@@ -53,7 +53,9 @@ guideCards.map(guide => {
 
     card.innerHTML =
     `
-        <div class="card-img"></div>
+        <div class="card-img guide-card">
+            <img src=${guide.image} alt="Guide Cover Image">
+        </div>
         <h3>${guide.title}</h3>
     `;
 
@@ -69,13 +71,13 @@ guideCards.map(guide => {
 const recommendCards = [
     {
         title: "Fan Favourite Indie Comic Reading List",
-        //image: "images/invincible.png",
+        image: "../images/recommendation-covers/radiant-black.jpg",
         recommendation: "indie"
     },
 
     {
         title: "Batman: Court of Owls Story Arc Reading Order",
-        //image: "images/invincible.png",
+        image: "../images/recommendation-covers/batman-CoO.jpg",
         recommendation: "batman"
     }
 ];
@@ -89,7 +91,9 @@ recommendCards.map(rec => {
 
     card.innerHTML =
     `
-        <div class="card-img"></div>
+        <div class="card-img reading">
+            <img src=${rec.image} alt="Recommendation Cover Image">
+        </div>
         <h3>${rec.title}</h3>
     `;
 
@@ -104,24 +108,27 @@ recommendCards.map(rec => {
 //Array for Home page character cards
 const characterCards = [
     {
-        //image: "images/invincible.png",
+        image: "../images/character-faces/peterParker.jpg",
         character: "spider-man-peter",
         tooltip: "Learn more about The Amazing Spider-Man"
     },
 
     {
-        //image: "images/invincible.png",
-        character: "superman"
+        image: "../images/character-faces/superman.avif",
+        character: "superman",
+        tooltip: "Learn more about The Man of Steel"
     },
 
     {
-        //image: "images/invincible.png",
-        character: "flash-barry"
+        image: "../images/character-faces/barryAllen.jpg",
+        character: "flash-barry",
+        tooltip: "Learn more about The Scarlet Speedster"
     },
 
     {
-        //image: "images/invincible.png",
-        character: "spider-man-miles"
+        image: "../images/character-faces/milesMorales.jpg",
+        character: "spider-man-miles",
+        tooltip: "Learn more about Spider-man: Miles Morales"
     },
 ];
 
@@ -134,7 +141,9 @@ characterCards.map(char => {
 
     card.innerHTML =
     `
-        <div class="card-img" id="char-card"></div>
+        <div class="card-img" id="char-card">
+            <img src=${char.image} alt="Character Face Image">
+        </div>
 
         <div class="character-tooltip">
             <p>${char.tooltip}</p>

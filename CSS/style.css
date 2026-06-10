@@ -64,6 +64,7 @@ html {
     justify-content: center;
     gap: 1rem; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.7rem;
 }
 
 .logo-title h1:hover {
@@ -80,6 +81,14 @@ html {
     margin-bottom: 0.5rem;
     height: 4rem;
     width: 4rem;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+.hamburger-btn {
+    cursor: pointer;
 }
 
 .nav-bar {
@@ -103,15 +112,7 @@ html {
     
 }
 
-/* Hidden bubble
-/
-/
-/
-/
-/
-/
-/
-/ */
+
 .nav-link::before {
     content: "";
     position: absolute;
@@ -134,19 +135,11 @@ html {
     z-index: -1;
 }
 
-/* Show bubble on hover */
 .nav-link:hover::before {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
-/*
-/
-/
-/
-/
-/
-/
-*/
+
 
 /* Home Page & Partial Universal Styling */
 
@@ -192,9 +185,16 @@ html {
     font-size: 1.5rem;
 }
 
-#start-btn:hover {
+#start-btn1:hover {
     cursor: pointer;
     color: #4b4b4b;
+    font-family: 'InterBlack', sans-serif;
+    font-size: 1.5rem;
+}
+
+#start-btn2:hover {
+    cursor: pointer;
+    color: #c3a41b;
     font-family: 'InterBlack', sans-serif;
     font-size: 1.5rem;
 }
@@ -203,6 +203,7 @@ html {
     background-color: #222222;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 1rem;
+    padding: 1rem;
     height: auto;
     display: flex;
     justify-content: center;
@@ -210,9 +211,9 @@ html {
 }
 
 .container2 {
-    background-color: none;
+    background-color: transparent;
     height: auto;
-    padding-left: 0.5rem;
+    padding: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -221,7 +222,7 @@ html {
     font-size: 2rem;
     color: #EBC626;
     text-shadow: 2px 2px 0 #6b0000;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .heading-style-2 {
@@ -229,7 +230,7 @@ html {
     font-size: 2rem;
     color: #222222;
     text-shadow: 2px 2px 0 #EBC626;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -250,10 +251,6 @@ footer img {
     justify-content: center;
     gap: 1rem;
 }
-
-
-
-
 
 .section-layout {
     position: relative;
@@ -293,33 +290,16 @@ footer img {
 }
 
 .card-img {
+
     height: 6rem;
     width: 5rem;
-    border: 0.5rem solid #888888;
+    border: 0.2rem solid #888888;
+    border-radius: 50%;
     background-color: #EBE8DF;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     position: relative;
     flex-shrink: 0;
 }
-
-.card-img::before,
-.card-img::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 125%;
-    height: 1px;
-    background-color: #222222;
-}
-
-.card-img::before {
-    transform: translate(-50%, -50%) rotate(50deg);
-}
-
-.card-img::after {
-    transform: translate(-50%, -50%) rotate(-50deg);
-}
-
 
 .page-link1 {
     color: #EBC626;
@@ -357,7 +337,7 @@ footer img {
 }
 
 .character-grid {
-    background-color: #888888;
+    background-color: #222222;
     border-radius: 10px;
     padding: 1rem;
     width: auto;
@@ -374,8 +354,52 @@ footer img {
     cursor: pointer;
 }
 
+
+#char-card img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
 #char-card:hover {
     transform: scale(1.2);
+}
+
+.guide-card {
+    width: 7rem;
+    height: auto;
+    border: 0.1rem solid #222222;
+    border-radius: 0%;
+    background-color: #EBE8DF;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.guide-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.reading {
+    width: 7rem;
+    height: auto;
+    border: 0.1rem solid #EBE8DF;
+    border-radius: 0%;
+    background-color: #EBE8DF;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.reading img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .lingo-section {
@@ -383,10 +407,14 @@ footer img {
     padding: 1rem;
 }
 
+.lingo-section h2 {
+    margin-bottom: 1.5rem;
+}
+
 .lingo-section p {
     font-family: 'InterMedium', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
 /*/////////////////////////////////////////////*/
@@ -409,6 +437,7 @@ footer img {
 
 #pop-chars-title {
     width: 15rem;
+    padding-left: 2rem;
 }
 
 .search-bar {
@@ -476,7 +505,14 @@ footer img {
     justify-content: center;
 }
 
-
+#container-char {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .character-preview {
     position: relative;
@@ -504,9 +540,53 @@ footer img {
     z-index: 10;
 }
 
-
 .character-preview:hover {
     z-index: 50;
+}
+
+#container-char h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.char-id-title{
+     margin-bottom: 1rem;
+}
+
+.char-id-title p {
+    font-family: 'InterMedium', sans-serif;
+    text-shadow: none;
+    padding-left: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.key-universes {
+    margin-bottom: 1rem;
+}
+
+.key-universes p {
+    font-family: 'InterMedium', sans-serif;
+    text-shadow: none;
+    padding-left: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.story-arcs {
+    margin-bottom: 1.5rem;
+}
+
+.story-arcs li {
+    font-family: 'InterMedium', sans-serif;
+    font-size: 1.2rem;
+    text-shadow: none;
+    padding-left: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.selected-card {
+    border: 4px solid #EBC626;
+    border-radius: 10px;
+    transition: 0.3s ease;
 }
 
 
@@ -558,6 +638,45 @@ footer img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#container-guides {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container-guides h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.char-intro {
+    margin-bottom: 1rem;
+}
+
+.char-intro p {
+    font-family: 'InterMedium', sans-serif;
+    font-size: 1.1rem;
+    text-shadow: none;
+    padding-left: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.beginner-guide {
+    padding: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.beginner-guide li {
+    font-family: 'InterMedium', sans-serif;
+    font-size: 1.2rem;
+    text-shadow: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 /*/////////////////////////////////////////////*/
@@ -763,8 +882,7 @@ footer img {
     border: none;
     color: #EBC626;
     font-family: 'RocaOneBold', sans-serif;
-    font-size: 1rem;
-    text-align: left;
+    font-size: 2rem;
     cursor: pointer;
     text-shadow: 2px 2px 0 #6b0000;
 }
@@ -776,4 +894,434 @@ footer img {
 
 .accordion-content.accordion-open {
     display: block;
+}
+
+
+
+/* ================================================= */
+/* TABLET RESPONSIVE DESIGN */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    /* ===================================== */
+    /* GLOBAL */
+    /* ===================================== */
+
+    .nav-bar {
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .heading-style-1 {
+        font-size: 1.8rem;
+    }
+
+    .heading-style-2 {
+        font-size: 1.8rem;
+    }
+
+    .card-grid {
+        gap: 1rem;
+    }
+
+    .card {
+        max-width: 16rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card-img {
+        width: 4rem;
+        height: 5rem;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .search-bar {
+        flex-wrap: wrap;
+    }
+
+    .search-input {
+        width: 15rem;
+        height: auto;
+    }
+
+    /* ===================================== */
+    /* HOME PAGE */
+    /* ===================================== */
+
+    #hero-home {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    #home-img img {
+        width: 22rem;
+    }
+
+    .hero-bold {
+        font-size: 2rem;
+    }
+
+    .hero-normal {
+        font-size: 1.1rem;
+    }
+
+    .recommended-grid {
+        gap: 3rem;
+    }
+
+    /* Popular Characters Section */
+
+    .character-grid {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .guide-card {
+        width: 5rem;
+        height: auto;
+    }
+
+    .reading {
+        width: 5rem;
+        height: auto;
+    }
+
+    /* ===================================== */
+    /* CHARACTERS PAGE */
+    /* ===================================== */
+
+    #char-pg-title {
+        font-size: 2.5rem;
+    }
+
+    #charsPage-img img {
+        width: 18rem;
+    }
+
+    #pop-chars-title {
+        width: 10rem;
+    }
+
+    .character-card {
+        padding-right: 1rem;
+    }
+
+    /* ===================================== */
+    /* BEGINNER GUIDES PAGE */
+    /* ===================================== */
+
+    #hero-guides {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #guidesPage-img img {
+        width: 14rem;
+    }
+
+    #guides-container {
+        padding: 1rem;
+    }
+
+    /* ===================================== */
+    /* RECOMMENDATIONS PAGE */
+    /* ===================================== */
+
+    #hero-recommend {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #recommend-img img {
+        width: 22rem;
+    }
+
+    #recommend-container {
+        padding-left: 1rem;
+    }
+
+    .grid-container {
+        padding: 1rem;
+    }
+
+    /* ===================================== */
+    /* GLOSSARY PAGE */
+    /* ===================================== */
+
+    #hero-glossary {
+        gap: 1rem;
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #glossaryPage-img img {
+        width: 10rem;
+    }
+
+    #glossaryPage-img-radiant img {
+        width: 14rem;
+    }
+
+    .glossary-term-grid {
+        gap: 1rem 2rem;
+    }
+
+    .glossary-term {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .glossary-container {
+        padding: 1rem;
+    }
+}
+
+/* ================================================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+    /* ===================================== */
+    /* GLOBAL */
+    /* ===================================== */
+
+    .logo-title {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .logo-title h1 {
+        font-size: 2rem;
+    }
+
+    .hamburger-btn {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-bar.nav-open {
+        display: flex;
+    }
+
+    .nav-bar {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        width: 40%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .heading-style-1,
+    .heading-style-2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-input {
+        width: 12rem;
+        height: 1rem;
+        margin-bottom: 0;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .page-link1,
+    .page-link2 {
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ===================================== */
+    /* HOME PAGE */
+    /* ===================================== */
+
+    #hero-home {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    #home-img img {
+        width: 16rem;
+    }
+
+    .hero-bold {
+        font-size: 1.8rem;
+    }
+
+    .hero-normal {
+        font-size: 1rem;
+    }
+
+    .recommended-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .character-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* ===================================== */
+    /* CHARACTERS PAGE */
+    /* ===================================== */
+
+    #char-pg-title {
+        font-size: 2rem;
+    }
+
+    #charsPage-img img {
+        width: 14rem;
+    }
+
+    .character-card {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .character-tooltip {
+        width: 10rem;
+        font-size: 0.8rem;
+    }
+
+    #pop-char-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    /* ===================================== */
+    /* BEGINNER GUIDES PAGE */
+    /* ===================================== */
+
+    #hero-guides {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #guidesPage-img img {
+        width: 12rem;
+    }
+
+    #guides-container {
+        padding: 0.5rem;
+    }
+
+    /* ===================================== */
+    /* RECOMMENDATIONS PAGE */
+    /* ===================================== */
+
+    #hero-recommend {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #recommend-img img {
+        width: 16rem;
+    }
+
+    .recommended-list {
+        padding: 0.5rem;
+    }
+
+    .recommendation-note {
+        width: 10rem;
+        font-size: 0.8rem;
+    }
+
+    /* ===================================== */
+    /* GLOSSARY PAGE */
+    /* ===================================== */
+
+    #hero-glossary {
+        flex-direction: column;
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    #glossaryPage-img img {
+        width: 8rem;
+    }
+
+    #glossaryPage-img-radiant img {
+        width: 12rem;
+    }
+
+    .glossary-term-grid {
+        gap: 1rem;
+    }
+
+    .glossary-term {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .glossary-container {
+        padding: 0.5rem;
+    }
 }

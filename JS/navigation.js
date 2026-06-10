@@ -11,6 +11,12 @@ navBar.innerHTML =
     <a href="glossary.html" class="nav-link" "glossary-btn">Glossary</a>
 `;
 
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+
+hamburgerBtn.addEventListener("click", () => {
+    navBar.classList.toggle("nav-open");
+});
+
 
 //Navigation to home page by clicking website logo
 const logo = document.querySelector(".logo-title img");
