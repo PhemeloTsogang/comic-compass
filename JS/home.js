@@ -18,7 +18,7 @@ const links = [goGuides, goCharacters, goRecommendations, goGlossary]; //contain
 
 links.map(link => {                                             //every link in array allows click to respective page
     link.addEventListener("click", () => {
-        window.location.href = `../${link.dataset.link}.html`;  //uses html data attribute value to acquire name of page
+        window.location.href = `${link.dataset.link}.html`;  //uses html data attribute value to acquire name of page
     });
 });
 
@@ -27,19 +27,19 @@ const guideCards = [
     //Each object holds card information
     {
         title: "How to Start Reading Spider-Man Comics",
-        image: "../images/guide-images/Beginner-spidey.jpg",
+        image: "images/guide-images/Beginner-spidey.jpg",
         guide: "spider-man"
     },
 
     {
         title: "How to Start Reading Batman Comics",
-        image: "../images/guide-images/batsy.png",
+        image: "images/guide-images/batsy.png",
         guide: "batman"
     },
 
     {
         title: "How to Start Reading DC Comics",
-        image: "../images/guide-images/dc.avif",
+        image: "images/guide-images/dc.avif",
         guide: "dc"
     }
 ];
@@ -71,13 +71,13 @@ guideCards.map(guide => {
 const recommendCards = [
     {
         title: "Fan Favourite Indie Comic Reading List",
-        image: "../images/recommendation-covers/radiant-black.jpg",
+        image: "images/recommendation-covers/radiant-black.jpg",
         recommendation: "indie-starter"
     },
 
     {
         title: "Batman: Court of Owls Story Arc Reading Order",
-        image: "../images/recommendation-covers/batman-CoO.jpg",
+        image: "images/recommendation-covers/batman-CoO.jpg",
         recommendation: "court-of-owls"
     }
 ];
@@ -108,25 +108,25 @@ recommendCards.map(rec => {
 //Array for Home page character cards
 const characterCards = [
     {
-        image: "../images/character-faces/peterParker.jpg",
+        image: "images/character-faces/peterParker.jpg",
         character: "spider-man-peter",
         tooltip: "Learn more about The Amazing Spider-Man"
     },
 
     {
-        image: "../images/character-faces/superman.avif",
+        image: "images/character-faces/superman.avif",
         character: "superman",
         tooltip: "Learn more about The Man of Steel"
     },
 
     {
-        image: "../images/character-faces/barryAllen.jpg",
+        image: "images/character-faces/barryAllen.jpg",
         character: "flash-barry",
         tooltip: "Learn more about The Scarlet Speedster"
     },
 
     {
-        image: "../images/character-faces/milesMorales.jpg",
+        image: "images/character-faces/milesMorales.jpg",
         character: "spider-man-miles",
         tooltip: "Learn more about Spider-man: Miles Morales"
     },

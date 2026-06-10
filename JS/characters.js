@@ -11,56 +11,56 @@ startBtn.addEventListener("click", () => {
 //array of popular character objects with all their information and tooltip information when hovered on
 const popChars = [
     {
-        image: "../images/character-faces/peterParker.jpg",
+        image: "images/character-faces/peterParker.jpg",
         character: "spider-man-peter",
         name: "Spider-Man",
         tooltip: "Peter Parker (Earth-616)"
     },
 
     {
-        image: "../images/character-faces/superman.avif",
+        image: "images/character-faces/superman.avif",
         character: "superman",
         name: "Superman",
         tooltip: "Clark Kent"
     },
 
     {
-        image: "../images/character-faces/barryAllen.jpg",
+        image: "images/character-faces/barryAllen.jpg",
         character: "flash-barry",
         name: "The Flash",
         tooltip: "Barry Allen"
     },
 
     {
-        image: "../images/character-faces/milesMorales.jpg",
+        image: "images/character-faces/milesMorales.jpg",
         character: "spider-man-miles",
         name: "Spider-Man",
         tooltip: "Miles Morales (Earth-1610)"
     },
 
     {
-        image: "../images/character-faces/Joker.jpg",
+        image: "images/character-faces/Joker.jpg",
         character: "joker",
         name: "The Joker",
         tooltip: ""
     },
 
     {
-        image: "../images/character-faces/Invincible.jpg",
+        image: "images/character-faces/Invincible.jpg",
         character: "invincible",
         name: "Invincible",
         tooltip: ""
     },
 
     {
-        image: "../images/character-faces/black_panther.jpg",
+        image: "images/character-faces/black_panther.jpg",
         character: "black-panther",
         name: "Black Panther",
         tooltip: "T'Challa"
     },
 
     {
-        image: "../images/character-faces/Diana.jpg",
+        image: "images/character-faces/Diana.jpg",
         character: "wonder-woman",
         name: "Wonder Woman",
         tooltip: "Diana of Themyscira"

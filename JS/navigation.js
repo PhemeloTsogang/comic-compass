@@ -24,9 +24,9 @@ const logo = document.querySelector(".logo-title img");
 const logoTitle = document.querySelector(".logo-title h1"); //selecting logo html element
 
 logo.addEventListener("click", () => {
-    window.location.href = "../index.html"; //click of the logo picture redirects to home page
+    window.location.href = "index.html"; //click of the logo picture redirects to home page
 });
 
 logoTitle.addEventListener("click", () => {
-    window.location.href = "../index.html"; //click of logo title opens home page
+    window.location.href = "index.html"; //click of logo title opens home page
 });

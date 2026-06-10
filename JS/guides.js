@@ -14,19 +14,19 @@ const popSearch = [
     //Each object holds card information
     {
         title: "How to Start Reading Spider-Man Comics",
-        image: "../images/guide-images/beginner-spidey.jpg",
+        image: "images/guide-images/beginner-spidey.jpg",
         guide: "spider-man"
     },
 
     {
         title: "How to Start Reading Miles Morales Comics",
-        image: "../images/guide-images/beginner-miles.jpg",
+        image: "images/guide-images/beginner-miles.jpg",
         guide: "miles-morales"
     },
 
     {
         title: "How to Start Reading Flash Comics",
-        image: "../images/guide-images/beginner-flash.jpg",
+        image: "images/guide-images/beginner-flash.jpg",
         guide: "flash-wally"
     },    
 ];

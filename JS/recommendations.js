@@ -11,14 +11,14 @@ startBtn.addEventListener("click", () => {
 const popStories = [
     {
         title: "Avatar the Last Airbender Comic Reading List",
-        image: "../images/recommendation-covers/avatar.jpg",
+        image: "images/recommendation-covers/avatar.jpg",
         recommendation: "atla"                                      // each "recommendation" value  is the corresponding name 
                                                                     // of the attribute associated to the actual recommendation
     },
 
     {
         title: "Spider-man Earth 616: Symbiote Story Arc (Canon)",
-        image: "../images/recommendation-covers/venom.jpg",
+        image: "images/recommendation-covers/venom.jpg",
         recommendation: "spider-616-venom"
     }
 ];
@@ -73,9 +73,9 @@ const recommendData = [
         titleDescription: "Follow Barry Allen's journey against his greatest rival, the Reverse Flash.",
         tags: "dc flash barry-allen reverse-flash canon long",
         comics: [
-            { title: "The Flash #1-12 (New 52)", image: "../images/recommend-lists/flash1.jpg" },
-            { title: "The Flash: Rebirth", image: "../images/recommend-lists/flash2.jpg" },
-            { title: "The Flash: Running Scared", image: "../images/recommend-lists/flash3.jpg" }
+            { title: "The Flash #1-12 (New 52)", image: "images/recommend-lists/flash1.jpg" },
+            { title: "The Flash: Rebirth", image: "images/recommend-lists/flash2.jpg" },
+            { title: "The Flash: Running Scared", image: "images/recommend-lists/flash3.jpg" }
         ]
     },
 
@@ -85,9 +85,9 @@ const recommendData = [
         titleDescription: "Batman uncovers a secret society that has manipulated Gotham City for centuries.",
         tags: "dc batman court-of-owls canon short",
         comics: [
-            { title: "Batman: The Court of Owls", image: "../images/recommend-lists/batman_Coo1.jpg" },
-            { title: "Batman: Night of the Owls", image: "../images/recommend-lists/batman_Coo2.jpg" },
-            { title: "Batman: City of Owls", image: "../images/recommend-lists/batman_Coo3.jpg" }
+            { title: "Batman: The Court of Owls", image: "images/recommend-lists/batman_Coo1.jpg" },
+            { title: "Batman: Night of the Owls", image: "images/recommend-lists/batman_Coo2.jpg" },
+            { title: "Batman: City of Owls", image: "images/recommend-lists/batman_Coo3.jpg" }
         ]
     },
 
@@ -97,12 +97,12 @@ const recommendData = [
         titleDescription: "Continue Avatar Aang's story after the original animated series.",
         tags: "dark-horse-comics avatar aang canon long",
         comics: [
-            { title: "The Promise Omnibus", image: "../images/recommend-lists/atla1.jpg" },
-            { title: "The Search Omnibus", image: "../images/recommend-lists/atla2.jpg" },
-            { title: "The Rift Omnibus", image: "../images/recommend-lists/atla3.jpg" },
-            { title: "Smoke and Shadow Omnibus", image: "../images/recommend-lists/atla4.jpg" },
-            { title: "North and South Omnibus", image: "../images/recommend-lists/atla5.jpg" },
-            { title: "Imbalance Omnibus", image: "../images/recommend-lists/atla6.jpg" }
+            { title: "The Promise Omnibus", image: "images/recommend-lists/atla1.jpg" },
+            { title: "The Search Omnibus", image: "images/recommend-lists/atla2.jpg" },
+            { title: "The Rift Omnibus", image: "images/recommend-lists/atla3.jpg" },
+            { title: "Smoke and Shadow Omnibus", image: "images/recommend-lists/atla4.jpg" },
+            { title: "North and South Omnibus", image: "images/recommend-lists/atla5.jpg" },
+            { title: "Imbalance Omnibus", image: "images/recommend-lists/atla6.jpg" }
         ]
     },
 
@@ -112,10 +112,10 @@ const recommendData = [
         titleDescription: "Watch Peter Parker obtain and eventually lose the alien symbiote that becomes Venom.",
         tags: "marvel spider-man venom symbiote canon long",
         comics: [
-            { title: "Marvel Super Heroes Secret Wars", image: "../images/recommend-lists/symbiote1.jpg" },
-            { title: "The Amazing Spider-Man #252-259", image: "../images/recommend-lists/symbiote2.jpg" },
-            { title: "Spectacular Spider-Man #90-100", image: "../images/recommend-lists/symbiote3.jpg" },
-            { title: "Web of Spider-Man #1", image: "../images/recommend-lists/symbiote4.jpg" }
+            { title: "Marvel Super Heroes Secret Wars", image: "images/recommend-lists/symbiote1.jpg" },
+            { title: "The Amazing Spider-Man #252-259", image: "images/recommend-lists/symbiote2.jpg" },
+            { title: "Spectacular Spider-Man #90-100", image: "images/recommend-lists/symbiote3.jpg" },
+            { title: "Web of Spider-Man #1", image: "images/recommend-lists/symbiote4.jpg" }
         ]
     },
 
@@ -125,11 +125,11 @@ const recommendData = [
         titleDescription: "A collection of some of the most beloved creator-owned comics outside Marvel and DC.",
         tags: "image-comics indie starter short",
         comics: [
-            { title: "Invincible Volume 1", image: "../images/recommend-lists/indie1.jpg" },
-            { title: "Saga Volume 1", image: "../images/recommend-lists/indie2.jpg" },
-            { title: "Radiant Black Volume 1", image: "../images/recommend-lists/indie3.jpg" },
-            { title: "Something is Killing the Children Volume 1", image: "../images/recommend-lists/indie4.jpg" },
-            { title: "Black Science Volume 1", image: "../images/recommend-lists/indie5.jpg" }
+            { title: "Invincible Volume 1", image: "images/recommend-lists/indie1.jpg" },
+            { title: "Saga Volume 1", image: "images/recommend-lists/indie2.jpg" },
+            { title: "Radiant Black Volume 1", image: "images/recommend-lists/indie3.jpg" },
+            { title: "Something is Killing the Children Volume 1", image: "images/recommend-lists/indie4.jpg" },
+            { title: "Black Science Volume 1", image: "images/recommend-lists/indie5.jpg" }
         ]
     },
 
@@ -139,10 +139,10 @@ const recommendData = [
         titleDescription: "Follow Darth Vader's journey between Revenge of the Sith and A New Hope.",
         tags: "star-wars darth-vader canon long",
         comics: [
-            { title: "Darth Vader (2015)", image: "../images/recommend-lists/vader1.jpg" },
-            { title: "Darth Vader Annual #1", image: "../images/recommend-lists/vader2.jpg" },
-            { title: "Darth Vader: Dark Lord of the Sith", image: "../images/recommend-lists/vader3.jpg" },
-            { title: "Darth Vader (2020)", image: "../images/recommend-lists/vader4.jpg" }
+            { title: "Darth Vader (2015)", image: "images/recommend-lists/vader1.jpg" },
+            { title: "Darth Vader Annual #1", image: "images/recommend-lists/vader2.jpg" },
+            { title: "Darth Vader: Dark Lord of the Sith", image: "images/recommend-lists/vader3.jpg" },
+            { title: "Darth Vader (2020)", image: "images/recommend-lists/vader4.jpg" }
         ]
     },
 
@@ -152,7 +152,7 @@ const recommendData = [
         titleDescription: "Experience one of the most influential X-Men stories ever published.",
         tags: "marvel x-men dark-phoenix canon short",
         comics: [
-            { title: "X-Men #129-137", image: "../images/recommend-lists/x-men1.jpg" }
+            { title: "X-Men #129-137", image: "images/recommend-lists/x-men1.jpg" }
         ]
     },
 
@@ -162,7 +162,7 @@ const recommendData = [
         titleDescription: "Marvel's heroes are divided over superhero registration in one of the publisher's biggest events.",
         tags: "marvel civil-war canon long",
         comics: [
-            { title: "Civil War #1-7", image: "../images/recommend-lists/civil-war.jpg" }
+            { title: "Civil War #1-7", image: "images/recommend-lists/civil-war.jpg" }
         ]
     },
 
@@ -172,12 +172,12 @@ const recommendData = [
         titleDescription: "A modern retelling of Spider-Man's origin and career set in Marvel's Ultimate Universe.",
         tags: "marvel spider-man miles-morales ultimate non-canon long",
         comics: [
-            { title: "Ultimate Spider-Man Omnibus Vol. 1", image: "../images/recommend-lists/ult-spidey1.jpg" },
-            { title: "Ultimate Spider-Man Omnibus Vol. 2", image: "../images/recommend-lists/ult-spidey2.jpg" },
-            { title: "Ultimate Spider-Man Omnibus Vol. 3", image: "../images/recommend-lists/ult-spidey3.jpg" },
-            { title: "Ultimate Spider-Man Omnibus Vol. 4", image: "../images/recommend-lists/ult-spidey4.jpg" },
-            { title: "Ultimate Spider-Man: Death of Spider-Man", image: "../images/recommend-lists/ult-spidey5.jpg" },
-            { title: "Ultimate Comics: Spider-Man Vol. 1", image: "../images/recommend-lists/ult-spidey6.jpg" }
+            { title: "Ultimate Spider-Man Omnibus Vol. 1", image: "images/recommend-lists/ult-spidey1.jpg" },
+            { title: "Ultimate Spider-Man Omnibus Vol. 2", image: "images/recommend-lists/ult-spidey2.jpg" },
+            { title: "Ultimate Spider-Man Omnibus Vol. 3", image: "images/recommend-lists/ult-spidey3.jpg" },
+            { title: "Ultimate Spider-Man Omnibus Vol. 4", image: "images/recommend-lists/ult-spidey4.jpg" },
+            { title: "Ultimate Spider-Man: Death of Spider-Man", image: "images/recommend-lists/ult-spidey5.jpg" },
+            { title: "Ultimate Comics: Spider-Man Vol. 1", image: "images/recommend-lists/ult-spidey6.jpg" }
         ]
     },
 
@@ -187,11 +187,11 @@ const recommendData = [
         titleDescription: "Follow Eddie Brock's journey from Spider-Man villain to anti-hero.",
         tags: "marvel venom eddie-brock canon long",
         comics: [
-            { title: "Venom: Lethal Protector", image: "../images/recommend-lists/venom1.jpg" },
-            { title: "Venom: Separation Anxiety", image: "../images/recommend-lists/venom2.jpg" },
-            { title: "Venom by Rick Remender", image: "../images/recommend-lists/venom3.jpg" },
-            { title: "Venom by Donny Cates", image: "../images/recommend-lists/venom4.jpg" },
-            { title: "King in Black", image: "../images/recommend-lists/venom5.jpg" }
+            { title: "Venom: Lethal Protector", image: "images/recommend-lists/venom1.jpg" },
+            { title: "Venom: Separation Anxiety", image: "images/recommend-lists/venom2.jpg" },
+            { title: "Venom by Rick Remender", image: "images/recommend-lists/venom3.jpg" },
+            { title: "Venom by Donny Cates", image: "images/recommend-lists/venom4.jpg" },
+            { title: "King in Black", image: "images/recommend-lists/venom5.jpg" }
         ]
     },    
 ];
